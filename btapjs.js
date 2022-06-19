@@ -50,27 +50,34 @@ console.log('Bài 2:');
             let c = document.getElementById('c').value;
 
             if (a == "" || b == "") {
-                console.log("Vui lòng nhập dữ liệu");
+                alert("Vui lòng nhập dữ liệu");
             } else {
                 a = Number(a);
                 b = Number(b);
                 c = Number(c);
                 giai_pt_bac_nhat(a, b, c);
             }
-            };
 
-        function giai_pt_bac_nhat(a, b, c)
+            function giai_pt_bac_nhat(a, b, c)
             {
                 if (a == 0 && b == 0) {
+                    document.getElementById("result").innerHTML = "Phương trình vô số nghiệm";
                     console.log('Phương trình vô số nghiệm');
                 } else if (a != 0 && b == 0) {
+                    document.getElementById("result").innerHTML = "Phương trình có nghiệm x = 0";
                     console.log('Phương trình có nghiệm x = 0');
                 } else if (a == 0 && b != 0) {
+                    document.getElementById("result").innerHTML = "Phương trình vô nghiệm";
                     console.log("Phương trình vô nghiệm");
                 } else {
-                    console.log('Phương trình có nghiệm x = ' + ((c-b) / a));
+                    let x = ((c-b)/a);
+                    document.getElementById("result").innerHTML = x;
+                    console.log('Phương trình có nghiệm x = ' + x);
                 }
             }
+            };
+
+           
 
 
 
@@ -94,8 +101,9 @@ console.log('Bài 3:');
         var dtbDol = (a1 + a2 + a3)/3;
         console.log(dtbDol)
         document.getElementById("dtbDol").innerHTML=dtbDol;
-        return(dtbDol);
         
+        
+        return(dtbDol);
     };
     
     tbKoa.onclick = function() {
@@ -108,6 +116,7 @@ console.log('Bài 3:');
         var dtbKoa = (b1 + b2 + b3)/3;
         console.log(dtbKoa)
         document.getElementById("dtbKoa").innerHTML=dtbKoa;
+    
         return(dtbKoa);
     };
     
@@ -119,6 +128,84 @@ console.log('Bài 3:');
             console.log(`Đội Dolphins có kêt quả là ${dtbDol} đã thắng đội Koalas có kết quả là ${dtbKoa}`)
         }
     }
-    
 
+
+//Bài 4
+console.log('Bài 4:');
+    var button = document.getElementById('sosanh2so');
+
+    sosanh2so.onclick = function() {
+        let m = document.getElementById('numberOne').value;
+        let n = document.getElementById('numberTwo').value;
+
+        if (m == "" || n == "") {
+            alert("Vui lòng nhập dữ liệu");
+        } else {
+            m = Number(m);
+            n = Number(n);
+            so_sanh(m, n);
+        }
+
+        function so_sanh(m, n) {
+            let k = m - n;
+            if (k == 0) {
+                console.log('Hai số bằng nhau');
+                document.getElementById("result1").innerHTML = "Hai số bằng nhau";
+            } else if (k > 0) {
+                console.log('Số thứ nhất')
+                document.getElementById("result1").innerHTML = "Số thứ nhất";
+            } else  {
+                console.log('Số thứ hai')
+                document.getElementById("result1").innerHTML = "Số thứ hai";
+            }
+
+        }
+    }
+
+    
+// Bài 5
+console.log('Bài 5:');
+    var button = document.getElementById('add');
+    var button = document.getElementById('sub');
+    var button = document.getElementById('mul');
+    var button = document.getElementById('div');
+    var button = document.getElementById('mud');
+
+    add.onclick = function () {
+        let m = document.getElementById('one').value;
+        let n = document.getElementById('two').value;
+
+        if (m == "" || n == "") {
+            alert("Vui lòng nhập dữ liệu");
+        } else {
+            m = Number(m);
+            n = Number(n);
+            add(m, n);
+        }
+
+        function add(m, n) {
+            let a = m + n;
+            console.log(a);
+            document.getElementById("result2").innerHTML = a;
+        }
+    }
+
+    sub.onclick = function () {
+        let m = document.getElementById('one').value;
+        let n = document.getElementById('two').value;
+
+        if (m == "" || n == "") {
+            alert("Vui lòng nhập dữ liệu");
+        } else {
+            m = Number(m);
+            n = Number(n);
+            add(m, n);
+        }
+
+        function add(m, n) {
+            let b = m - n;
+            console.log(b);
+            document.getElementById("result2").innerHTML = b;
+        }
+    }
        
