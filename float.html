@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border:1px solid black;
+          border-collapse: collapse;
+        }
+
+        input {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h3>Bài 1</h3>
+
+    </form>
+
+    <form>
+        <h3>Bài 2</h3>
+        Nhập số a: <input type="text" id="a" value=""/> <br/>
+        Nhập số b: <input type="text" id="b" value=""/> <br/>
+        Nhập số c: <input type="text" id="c" value=""/> <br>
+        <span id="result"></span> <br/>
+        <input type="button" id="giaiPtbacnhat" value="Tìm nghiệm"/>
+    </form>
+
+    <form>
+        <h3>Bài 3</h3>
+        <table >
+            <tr>
+                <th>Lượt thi đấu</th>
+                <th>Lần 1</th> 
+                <th>Lần 2</th>
+                <th>Lần 3</th>
+                <th style="width: 120px">Điểm trung bình</th>
+            </tr>
+            <tr>
+                <td>Dolphins</td>
+                <td><input type="number" id="a1" value="" style="width:50px"/></td>
+                <td><input type="number" id="a2" value="" style="width:50px"/></td>
+                <td><input type="number" id="a3" value="" style="width:50px"/></td>
+                <td id="dtbDol" style="width:50px"></td>
+            </tr> 
+            <tr>
+                <td>Koalas</td>
+                <td><input type="number" id="b1" value="" style="width:50px"/></td>
+                <td><input type="number" id="b2" value="" style="width:50px"/></td>
+                <td><input type="number" id="b3" value="" style="width:50px"/></td>
+                <td id="dtbKoa" style="width:50px"></td>
+            </tr>      
+        </table><br>
+
+        <input type="button" id="tbDol" value="Điểm trung bình đội Dolphins"/>
+        <input type="button" id="tbKoa" value="Điểm trung bình đội Koalas"/><br>
+        <input type="button" id="sosanh" value="So sánh kết quả"/>
+               
+    </form>
+
+    <script src="./app.js"></script>
+   
+   
+</body>
+</html>
