@@ -107,14 +107,12 @@ console.log('Bài 3:');
         return(dtbKoa);
     };
 
-    sosanh.onclick = function (dtbDol, dtbKoa){
+    
 
         if (dtbDol > dtbKoa) {
             console.log(`Đội Dolphins có kêt quả là ${dtbDol} đã thắng đội Koalas có kết quả là ${dtbKoa}`)
         }
-    }
-
-        
+            
     
 
        
