@@ -30,7 +30,7 @@
         Nhập số b: <input type="text" id="b" value=""/> <br/>
         Nhập số c: <input type="text" id="c" value=""/> <br><br>
         Nghiệm của phương trình ax + b = c là: <span id="result"> </span> <br/><br>
-        <input type="button" id="giaiPtbacnhat" value="Tìm nghiệm" style="width:100px; height: 24px; cursor: pointer;"/>
+        <input type="button" id="giaiPtbacnhat" value="Tìm nghiệm" style="width:100px; height: 24px; cursor: pointer; border: none ;border-style: outset"/>
     </form>
     <hr>
 
@@ -60,9 +60,9 @@
             </tr>      
         </table><br>
 
-        <input type="button" id="tbDol" value="Điểm trung bình đội Dolphins" style="width: 200px; height: 24px; cursor: pointer;"/>
-        <input type="button" id="tbKoa" value="Điểm trung bình đội Koalas" style="width: 200px; height: 24px; cursor: pointer;"/><br><br>
-        <input type="button" id="sosanh" value="So sánh kết quả" style="width: 404px; height: 24px; cursor: pointer;"/>
+        <input type="button" id="tbDol" value="Điểm trung bình đội Dolphins" style="width: 200px; height: 24px; cursor: pointer; border: none; border-style: ridge;"/>
+        <input type="button" id="tbKoa" value="Điểm trung bình đội Koalas" style="width: 200px; height: 24px; cursor: pointer; border: none; border-style: ridge"/><br><br>
+        <input type="button" id="sosanh" value="So sánh kết quả" style="width: 404px; height: 24px; cursor: pointer;border: none; border-style: outset"/>
                
     </form>
     <hr>
@@ -77,30 +77,54 @@
         <input type="text" id="numberTwo" value=""/> <br/><br>
         Số lớn nhất là: <span id="result1"></span><br/>
         <br>
-        <input type="button" id="sosanh2so" value="So sánh 2 số" style="width: 285px; height: 24px; cursor: pointer;"/>
+        <input type="button" id="sosanh2so" value="So sánh 2 số" style="width: 285px; height: 24px; cursor: pointer; border: none; border-style: outset"/>
    </form>
    <hr>
 
    <form>
     <h3>Bài 5</h3>
     <label for="">Number 1:</label>
-    <input type="text" id="one" value="" style="width: 200px;"/><br>
+    <input type="text" id="one" value="" style="width: 50px;"/><br>
     <label for="">Number 2:</label>
-    <input type="text" id="two" value="" style="width: 200px;"/> <br/><br>
-    
-    <input type="button" id="add" value="ADD" style="width: 50px; height: 24px; cursor: pointer;"/>
-    <input type="button" id="sub" value="SUB" style="width: 50px; height: 24px; cursor: pointer;"/>
-    <input type="button" id="mul" value="MUL" style="width: 50px; height: 24px; cursor: pointer;"/>
-    <input type="button" id="div" value="DIV" style="width: 50px; height: 24px; cursor: pointer;"/>
-    <input type="button" id="mud" value="MUD" style="width: 50px; height: 24px; cursor: pointer;"/>
+    <input type="text" id="two" value="" style="width: 50px;"/> <br/><br>
+    <input type="button" id="add" value="ADD" style="width: 50px; height: 24px; cursor: pointer; border: none; border-style: outset"/>
+    <input type="button" id="sub" value="SUB" style="width: 50px; height: 24px; cursor: pointer; border: none; border-style: outset"/>
+    <input type="button" id="mul" value="MUL" style="width: 50px; height: 24px; cursor: pointer; border: none; border-style: outset"/>
+    <input type="button" id="div" value="DIV" style="width: 50px; height: 24px; cursor: pointer; border: none; border-style: outset"/>
+    <input type="button" id="mud" value="MUD" style="width: 50px; height: 24px; cursor: pointer; border: none; border-style: outset"/>
     <br><br>
-    <div style=" display: flex">
 
+    <div style=" display: flex">
         <div style="margin-right: 5px; height: 18px;">RESULT: </div>
-        <div id="result2" style="border: 1px solid black; width: 100px; height: 18px; text-align: center;"></div>
+        <div id="result2" style="border: 1px solid #9c9999; width: 200px; height: 18px; text-align: center; border: none; border-style:double"></div>
     </div>
-</form>
-<hr>
+    </form>
+    <hr>
+
+    <form action="">
+        <h3>Bài 6</h3>
+        <label style="padding-right: 18px; border: none; border-style:double; margin: 0 2px; height: 18px;">NAME: </label>
+        <input type="text" id="name" value="" style="width: 250px; height: 19px;"/><br>
+        <label style="padding-right: 5px; border: none; border-style:double; margin: 0 2px;">SCORES: </label>
+        <input type="text" id="scores" value="" style="width: 250px;  height: 19px;"/><br><br>
+        <input type="button" id="getResult" value="Get Result" style="width:100px; height: 24px; cursor: pointer; border: none ;border-style: outset"/><br><br><br>
+
+        
+            <div style="margin-right: 5px; height: 18px;">RESULT: </div><br>
+            <table id="" style="border: 1px solid #9c9999; width: 500px; height: 18px; text-align: center; border: none; border-style:double">
+                <tr style="height: 30px">
+                    <th style="width: 60%;">NAME</th>
+                    <th style="width:20%;">SCORES</th>
+                    <th>RANKED</th>
+                </tr>
+                <tr style="height: 25px;">
+                    <td id="getName"></td>
+                    <td id="getScores"></td>
+                    <td id="getRanked"></td>
+                </tr>
+            </table>        
+    </form>
+    <hr><br><br>
 
 <script src="./btapjs.js"></script>
 </body>

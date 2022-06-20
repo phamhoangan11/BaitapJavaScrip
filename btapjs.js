@@ -242,6 +242,7 @@ console.log('Bài 5:');
 
         function add(m, n) {
             if (n == 0) {
+                document.getElementById("result2").innerHTML = "Không thể thực hiện phép tính";
                 alert ('Không thể thực hiện phép tính');
             } else {
                 let d = m / n;
@@ -264,9 +265,59 @@ console.log('Bài 5:');
         }
 
         function add(m, n) {
+            if (n == 0) {
+                document.getElementById("result2").innerHTML = "Không thể thực hiện phép tính";
+                alert ('Không thể thực hiện phép tính');
+            } else {
             let e = (m % n);
             console.log(e);
             document.getElementById("result2").innerHTML = e;
+            }
         }
     }
-       
+
+    
+// Bài 6
+console.log('Bài 6');
+    var button = document.getElementById('getResult');
+    getResult.onclick = function() {
+        let name = document.getElementById('name').value;
+        let scores = document.getElementById('scores').value;
+
+        if (name == "" || scores == "") {
+            alert("Vui lòng nhập dữ liệu");
+        } else if (scores < 0 || scores > 100) {
+            document.getElementById("getRanked").style.backgroundColor = "white";
+            document.getElementById("getRanked").innerHTML = "Nhập sai";
+            alert("Trường dữ liệu sai, vui lòng nhập lại");
+        } else {
+            name = String(name);
+            scores = Number(scores);
+            result(name, scores);
+        }
+
+        function result(name, scores) {
+            document.getElementById("getName").innerHTML = name;
+            document.getElementById("getScores").innerHTML = scores;
+            if (scores >= 0 && scores < 40) {
+                document.getElementById("getRanked").style.backgroundColor = "red";
+                document.getElementById("getRanked").innerHTML = "F";
+            } else if (scores >=40 && scores < 60) {
+                document.getElementById("getRanked").style.backgroundColor = "orange";
+                document.getElementById("getRanked").innerHTML = "D";
+            } else if (scores >=60 && scores < 70) {
+                document.getElementById("getRanked").style.backgroundColor = "yellow";
+                document.getElementById("getRanked").innerHTML = "C";
+            } else if (scores >=70 && scores < 80) {
+                document.getElementById("getRanked").style.backgroundColor = "green";
+                document.getElementById("getRanked").innerHTML = "B";
+            } else if (scores >=80 && scores < 90) {
+                document.getElementById("getRanked").style.backgroundColor = "blue";
+                document.getElementById("getRanked").innerHTML = "A";
+            } else {
+                document.getElementById("getRanked").style.backgroundColor = "green";
+                document.getElementById("getRanked").innerHTML = "A+";
+            }
+        }
+    }
+
