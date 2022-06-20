@@ -92,39 +92,36 @@ console.log('Bài 3:');
     
     
     tbDol.onclick = function() {
-        var a1 = document.getElementById('a1').value;
-        var a2 = document.getElementById('a2').value;
-        var a3 = document.getElementById('a3').value;
+        let a1 = document.getElementById('a1').value;
+        let a2 = document.getElementById('a2').value;
+        let a3 = document.getElementById('a3').value;
         a1 = Number(a1);
         a2 = Number(a2);
         a3 = Number(a3);
         var dtbDol = (a1 + a2 + a3)/3;
         console.log(dtbDol)
         document.getElementById("dtbDol").innerHTML=dtbDol;
-        
-        
-        return(dtbDol);
+        // ket_qua(dtbDol);    
     };
     
     tbKoa.onclick = function() {
-        var b1 = document.getElementById('b1').value;
-        var b2 = document.getElementById('b2').value;
-        var b3 = document.getElementById('b3').value;
+        let b1 = document.getElementById('b1').value;
+        let b2 = document.getElementById('b2').value;
+        let b3 = document.getElementById('b3').value;
         b1 = Number(b1);
         b2 = Number(b2);
         b3 = Number(b3);
         var dtbKoa = (b1 + b2 + b3)/3;
         console.log(dtbKoa)
         document.getElementById("dtbKoa").innerHTML=dtbKoa;
-    
-        return(dtbKoa);
+        // ket_qua(dtbKoa);
     };
     
-    
-
-    
-    sosanh.onclick = function(dtbDol, dtbKoa) {
-        if (dtbDol > dtbKoa) {
+    sosanh.onclick = function (dtbDol, dtbKoa) {
+        var x = this.dtbDol;
+        var y = this.dtbKoa;
+        // console.log(x)
+            if (x > y) {
             console.log(`Đội Dolphins có kêt quả là ${dtbDol} đã thắng đội Koalas có kết quả là ${dtbKoa}`)
         }
     }
