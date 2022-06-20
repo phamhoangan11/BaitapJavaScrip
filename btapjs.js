@@ -208,4 +208,65 @@ console.log('Bài 5:');
             document.getElementById("result2").innerHTML = b;
         }
     }
+
+    mul.onclick = function () {
+        let m = document.getElementById('one').value;
+        let n = document.getElementById('two').value;
+
+        if (m == "" || n == "") {
+            alert("Vui lòng nhập dữ liệu");
+        } else {
+            m = Number(m);
+            n = Number(n);
+            add(m, n);
+        }
+
+        function add(m, n) {
+            let c = m * n;
+            console.log(c);
+            document.getElementById("result2").innerHTML = c;
+        }
+    }
+
+    div.onclick = function () {
+        let m = document.getElementById('one').value;
+        let n = document.getElementById('two').value;
+
+        if (m == "" || n == "") {
+            alert("Vui lòng nhập dữ liệu");
+        } else {
+            m = Number(m);
+            n = Number(n);
+            add(m, n);
+        }
+
+        function add(m, n) {
+            if (n == 0) {
+                alert ('Không thể thực hiện phép tính');
+            } else {
+                let d = m / n;
+                console.log(d);
+                document.getElementById("result2").innerHTML = d;
+            }
+        }
+    }
+
+    mud.onclick = function () {
+        let m = document.getElementById('one').value;
+        let n = document.getElementById('two').value;
+
+        if (m == "" || n == "") {
+            alert("Vui lòng nhập dữ liệu");
+        } else {
+            m = Number(m);
+            n = Number(n);
+            add(m, n);
+        }
+
+        function add(m, n) {
+            let e = (m % n);
+            console.log(e);
+            document.getElementById("result2").innerHTML = e;
+        }
+    }
        
