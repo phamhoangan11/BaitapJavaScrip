@@ -130,7 +130,6 @@ console.log('Bài 3:');
 //Bài 4
 console.log('Bài 4:');
     var button = document.getElementById('sosanh2so');
-
     sosanh2so.onclick = function() {
         let m = document.getElementById('numberOne').value;
         let n = document.getElementById('numberTwo').value;
