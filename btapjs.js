@@ -84,9 +84,9 @@ console.log('Bài 2:');
 
 // Bai 3
 console.log('Bài 3:');
-    var button = document.getElementById('tbDol');
-    var button = document.getElementById('tbKoa');
-    var button = document.getElementById('sosanh');
+    var buttonOne = document.getElementById('tbDol');
+    var buttonTwo = document.getElementById('tbKoa');
+    var buttonThree = document.getElementById('sosanh');
     var dtbKoa = document.getElementById('dtbKoa');
     var dtbDol = document.getElementById('dtbDol');
     
