@@ -117,14 +117,20 @@ console.log('Bài 3:');
         // ket_qua(dtbKoa);
     };
     
-    sosanh.onclick = function (dtbDol, dtbKoa) {
-        var x = this.dtbDol;
-        var y = this.dtbKoa;
-        // console.log(x)
-            if (x > y) {
-            console.log(`Đội Dolphins có kêt quả là ${dtbDol} đã thắng đội Koalas có kết quả là ${dtbKoa}`)
-        }
-    }
+    buttonThree.onclick = function () {
+          var x = dtbDol.textContent;
+          var y = dtbKoa.textContent;
+         
+          if (+x > +y) {
+            console.log(
+              `Đội Dolphins có kêt quả là ${+dtbDol.textContent} đã thắng đội Koalas có kết quả là ${+dtbKoa.textContent}`
+            );
+          } else {
+            console.log(
+                `Đội Dolphins có kêt quả là ${+dtbDol.textContent} đã thua đội Koalas có kết quả là ${+dtbKoa.textContent}`
+              );
+          }
+        };
 
 
 //Bài 4
